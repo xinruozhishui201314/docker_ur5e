@@ -21,4 +21,4 @@ services:
         privileged: true
         tty: true
         network_mode: host
-        command: bash -c "source /opt/ros/melodic/setup.bash && cd /catkin_ws && catkin build && bash"
+        command: bash -c "source /opt/ros/melodic/setup.bash && cd /catkin_ws && rosdep init && rosdep update && rosdep install -i --from-paths src -y && catkin build && bash"

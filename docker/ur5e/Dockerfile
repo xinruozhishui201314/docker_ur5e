@@ -1,4 +1,4 @@
-FROM nvidia/opengl:1.1-glvnd-runtime-ubuntu18.04
+FROM nvidia/opengl:1.2-glvnd-runtime-ubuntu18.04
 
 RUN apt-get update && apt-get install -y --no-install-recommends curl lsb-release wget gnupg
 RUN sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -23,6 +23,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-melodic-tf2-tools \
     ros-melodic-robot-state-publisher \
     ros-melodic-genpy \
+    ros-melodic-industrial-core \
     ros-melodic-roslint \
     python-catkin-tools \
     byobu \
@@ -31,7 +32,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
     vim \
     net-tools \
-    build-essential
+    build-essential \
+    dbus \
+    python-rosdep
+
 ADD bringup.bash /
 RUN echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 RUN echo "source /catkin_ws/devel/setup.bash" >> ~/.bashrc
