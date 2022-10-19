@@ -16,15 +16,10 @@ Docker of a development environment for Universal Robots UR5e.
     $ git clone git@github.com:Osaka-University-Harada-Laboratory/docker_ur5e.git
 
 ## Usage
-##### build
+#### Host machine
     $ cd docker_ur5e
     $ docker-compose build
-
-##### run & catkin build
     $ docker-compose up
-  
-##### use bash
-    # from host machine
     $ xhost +
     $ docker exec -it ur5e_container bash
 
