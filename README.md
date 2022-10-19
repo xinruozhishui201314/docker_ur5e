@@ -4,12 +4,12 @@ Docker of a development environment for Universal Robots UR5e.
 
 ## Requirements (tested)
 
- - RTX3080
+- Ubuntu 20.04
+  - RTX3080
     - NVIDIA Driver 460.91.03
- - Ubuntu 20.04
- - docker 20.10.12
- - docker-compose 1.29.2
- - nvidia-docker2 2.8.0-1
+  - docker 20.10.12
+  - docker-compose 1.29.2
+  - nvidia-docker2 2.8.0-1
 
 ## Installation
 
